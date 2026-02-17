@@ -1,3 +1,4 @@
+//import { GET } from '@/app/api/projects/route'
 import ProjectCard from '@/components/ProjectCard';
 import { projects } from '@/data/projects';
 
