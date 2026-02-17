@@ -3,10 +3,12 @@ import { BadgeCheck, Briefcase, GraduationCap, Code } from "lucide-react";
 
 export default function About() {
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
       {/* Bio Section */}
-      <section className="mb-20">
-        <h1 className="text-4xl font-bold mb-6 text-primary">{personalData.about.title}</h1>
+      <section className="mb-12 sm:mb-16 lg:mb-20">
+      <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-6">
+        <span className="gradient-text">{personalData.about.title}</span>
+      </h1>
         <div className="flex flex-col md:flex-row gap-12 items-start">
            {/* Placeholder for profile image if available, else simple block */}
           <div className="w-full md:w-1/3 aspect-square bg-muted rounded-2xl flex items-center justify-center overflow-hidden relative">
@@ -17,18 +19,18 @@ export default function About() {
           </div>
           
           <div className="flex-1 space-y-6">
-            <h2 className="text-3xl font-semibold">{personalData.about.name}</h2>
-            <h3 className="text-xl text-muted-foreground">{personalData.about.role}</h3>
-            <p className="text-lg leading-relaxed">{personalData.about.description}</p>
-            <p className="font-medium text-primary">{personalData.about.subtext}</p>
+            <h2 className="text-2xl sm:text-3xl font-bold">{personalData.about.name}</h2>
+            <h3 className="text-lg sm:text-xl text-secondary font-semibold">{personalData.about.role}</h3>
+            <p className="text-base sm:text-lg leading-relaxed text-muted-foreground">{personalData.about.description}</p>
+            <p className="font-semibold text-primary">{personalData.about.subtext}</p>
             
             <div className="grid grid-cols-2 gap-4 mt-8">
-              <div className="p-4 bg-card border rounded-lg">
-                <div className="text-3xl font-bold text-primary mb-1">{personalData.experiences.length}+</div>
+              <div className="glass-effect p-4 sm:p-6 rounded-2xl transition-all hover:scale-105">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{personalData.experiences.length}+</div>
                 <div className="text-sm text-muted-foreground">Projets significatifs</div>
               </div>
-               <div className="p-4 bg-card border rounded-lg">
-                <div className="text-3xl font-bold text-primary mb-1">{personalData.education.length}</div>
+               <div className="glass-effect p-4 sm:p-6 rounded-2xl transition-all hover:scale-105">
+                <div className="text-2xl sm:text-3xl font-bold gradient-text mb-1">{personalData.education.length}</div>
                 <div className="text-sm text-muted-foreground">Diplômes & Certifs</div>
               </div>
             </div>
@@ -38,9 +40,9 @@ export default function About() {
 
       {/* Skills Section */}
       <section className="mb-20">
-        <h2 className="text-3xl font-bold mb-8 flex items-center gap-2">
-          <Code className="h-8 w-8 text-primary" />
-          Compétences Techniques
+        <h2 className="text-2xl sm:text-3xl font-bold mb-6 sm:mb-8 flex items-center gap-2">
+          <Code className="h-6 w-6 sm:h-8 sm:w-8 text-primary" />
+          <span className="gradient-text">Compétences Techniques</span>
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
